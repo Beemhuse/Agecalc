@@ -55,6 +55,7 @@ const guessMyAge = () =>{
                 warning.style.display='block'
                 warning.innerHTML=`<h1>Please make a valid input</h1>`
                 // set a timeout function to call the display
+
                 // setTimeout(() => {
                 //     warning.style.display='none'    
                 //     // location.reload()
@@ -64,12 +65,6 @@ const guessMyAge = () =>{
             else{
                 success.innerHTML= `<h1> You are  ${myAge.value} years old !!!</h1>\n`
                 success.style.display='block'
-                // success.style.width='30vw'
-
-                setTimeout(() => {
-                    success.style.display=''                    
-                    // location.reload()
-                }, 5000);
             }
         })
 
