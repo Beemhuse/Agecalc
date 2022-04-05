@@ -48,17 +48,35 @@ const guessMyAge = () =>{
                 document.getElementById('alert').innerHTML=`Year is greater than ${year}, please input a valid year`
                 
             }
-            
+
+            else if(ageValue==NaN){
+                myAge.value=''
+                // This is the alert message
+                warning.style.display='block'
+                warning.innerHTML=`<h1>Please make a valid input</h1>`
+                // set a timeout function to call the display
+                // setTimeout(() => {
+                //     warning.style.display='none'    
+                //     // location.reload()
+                // }, 5000);
+                
+            }
             else{
-                success.innerHTML= `<h1> You are  ${myAge.value} <br> years old !!!</h1>\n`
+                success.innerHTML= `<h1> You are  ${myAge.value} years old !!!</h1>\n`
                 success.style.display='block'
-                success.style.width='60vw'
+                // success.style.width='30vw'
 
                 setTimeout(() => {
                     success.style.display=''                    
-                    location.reload()
+                    // location.reload()
                 }, 5000);
             }
+        })
+
+        let reset = document.getElementById('btnReset');
+        reset.addEventListener('click', ()=>{
+            location.reload()
+            console.log('clicked')
         })
     }
     Age()
